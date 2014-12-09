@@ -1,0 +1,30 @@
+movimentos:
+	golpe 
+		alto
+			ga
+		baixo
+			gb
+	
+	defesa
+		alta
+			da
+		baixa
+			db
+	
+se os dois jogadores fazem o mesmo movimento
+de ataque, os dois meio que tomam um hit, portanto,
+cada um ganha um ponto.
+
+se os dois jogadores defendem, nenhum ganha algum
+ponto.
+
+golpe alto direto ( ga + db ) e o dano maximo,
+vale 4 pontos.
+
+golpe baixo ( gb + ga ou gb + da ) e o dano minimo,
+2 pontos.
+
+uma defesa bem sucedida ( da + ga ou db + gb ) da
+um 1 ponto.
+
+
