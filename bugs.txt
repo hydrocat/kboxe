@@ -1,1 +1,2 @@
--A pontuacao nao esta sendo marcada corretamente
+-A pontuacao nao esta sendo marcada corretamente.
+-Dependendo dos movimentos, ocorre um erro no malloc.
