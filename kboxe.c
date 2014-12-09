@@ -109,19 +109,17 @@ void score( int mov1, int mov2, int *score1, int *score2 ){
 	if( mov1 == mov2 ){
 	
 	//debug
-	printf("Movimentos iguais\n");
+	//printf("Movimentos iguais\n");
 	//endDebug
 
 		if( mov1 == 0 || mov1 == 1){
 
 			//debug
-			printf("Movimentos de ataque iguais\n");
+			//printf("Movimentos de ataque iguais\n");
 			//endDebug
 
-			*score1+=1;
-			*score2+=1;
-	
-			printf("score1 [%d] score2 [%d]\n",*score1,*score2);
+			(*score1)++;
+			(*score2)++;
 		}
 		//se ambos movimentos forem defesas,
 		//niguem ganha nada.
@@ -131,21 +129,21 @@ void score( int mov1, int mov2, int *score1, int *score2 ){
 	if( mov1 == 0 || mov2 == 0 ){
 	
 		//debug
-		printf("Movimentos ga\n");
+		//printf("Movimentos ga\n");
 		//endDebug
 
 		if( mov1 == 3 ){
-			*score2 += 4;
+			(*score2) += 4;
 
 			//debug
-			printf("Jogador teve a guarda baixa \n");
+			//printf("Jogador teve a guarda baixa \n");
 			//endDebug
 		}else{
 	
 		if( mov2 == 3 ){
-			*score1 += 4;
+			(*score1) += 4;
 			//debug
-			printf("CPU teve a guarda baixa \n");
+			//printf("CPU teve a guarda baixa \n");
 			//endDebug
 		}
 		}
@@ -157,21 +155,21 @@ void score( int mov1, int mov2, int *score1, int *score2 ){
 	if( mov1 == 1 || mov2 == 1 ){
 
 		//debug
-		printf("Movimento de golpe baixo \n");
+		//printf("Movimento de golpe baixo \n");
 		//endDebug
 
 		if( mov1 == 0 || mov1 == 2 ){
-			*score2 += 2;
+			(*score2) += 2;
 
 			//debug
-			printf("CPU acertou o GB \n");
+			//printf("CPU acertou o GB \n");
 			//endDebug
 		}else{
 
 		if( mov2 == 0 || mov2 == 2 ){
-			*score1 += 2;
+			(*score1) += 2;
 			//debug
-			printf("Jogador acertou o GB \n");
+			//printf("Jogador acertou o GB \n");
 			//endDebug
 		}
 		}
@@ -179,27 +177,27 @@ void score( int mov1, int mov2, int *score1, int *score2 ){
 	
 	//se for uma defesa bem sucedida, adiciona 1 ponto.
 	if( mov1 == 2 && mov2 == 0 ){
-			*score1++;
+			(*score1)++;
 			//debug
-			printf("Jogador defendeu um GA \n");
+			//printf("Jogador defendeu um GA \n");
 			//endDebug
 	}else{
 	if( mov1 == 3 && mov2 == 1 ){
-			*score1++;
+			(*score1)++;
 			//debug
-			printf("Jogador defendeu um GB \n");
+			//printf("Jogador defendeu um GB \n");
 			//endDebug
 	}else{
 	if( mov1 == 0 && mov2 == 2 ){
-			*score2++;
+			(*score2)++;
 			//debug
-			printf("CPU defendeu um GA \n");
+			//printf("CPU defendeu um GA \n");
 			//endDebug
 	}else{
 	if( mov1 == 1 && mov2 == 3 ){
-			*score2++;
+			(*score2)++;
 			//debug
-			printf("CPU defendeu um GB \n");
+			//printf("CPU defendeu um GB \n");
 			//endDebug
 	}
 
@@ -300,8 +298,10 @@ int main( int argc, char *argv[] ){
 	jogador.score 	= 0;
 	cpu.score	= 0; 
 
+	//Get Ready, Fight !
 	fight( &jogador, &cpu , argc-1);
 
+	//imprime o placar comparando os movimentos
 	printPlacar( jogador, cpu, argc-1 );
 
 return 0;
