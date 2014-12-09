@@ -1,3 +1,3 @@
 [Arrumado]-A pontuacao nao esta sendo marcada corretamente.
 -Dependendo dos movimentos, ocorre um erro no malloc.
--Os movimentos do CPU nao sao aleatorios o sufuciente.
+[Arrumado]-Os movimentos do CPU nao sao aleatorios o sufuciente.
