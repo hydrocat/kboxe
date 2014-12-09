@@ -1,0 +1,1 @@
+-A pontuacao nao esta sendo marcada corretamente
