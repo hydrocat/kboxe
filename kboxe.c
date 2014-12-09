@@ -1,11 +1,11 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
+#include<sys/time.h>
 
 //struct que define os movimentos
 //*movimentos: aponta para um vetor que 
 //contenha os valores dos movimentos.
-//
 //pontos: e a qtd de pontos do determinado
 //jogador.
 struct player{
@@ -93,7 +93,7 @@ int * fzMov( int size ){
 	int i=0;
 	for(; i<size; i++){
 		//gera um numero de 0 ate 3.
-		mov[i] = rand() % 3;
+		mov[i] = rand() % 4;
 	}
 return mov;
 }
@@ -286,7 +286,9 @@ int main( int argc, char *argv[] ){
 
 	//inicializando o srand para fazer os
 	//movimentos do jogador CPU.
-	srand( time(NULL) );
+	struct timeval t1;
+	gettimeofday( &t1, NULL );
+	srand( t1.tv_usec * t1.tv_sec );
 
 	//iniciando ambos jogadores.
 	struct player jogador;
