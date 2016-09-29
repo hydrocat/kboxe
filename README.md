@@ -3,8 +3,8 @@ kboxe
 
 Pt-BR
 ===
-Eh um jogo de luta em CLI
-em que para jogar, o usuario deve inserir os movimentos do lutador como parametros.
+É um jogo de luta em CLI
+em que para jogar, o usuário deve inserir os movimentos do lutador como parâmetros.
 
 En
 ====
